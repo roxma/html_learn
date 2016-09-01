@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+
+		<title>center of viewport</title>
+
+		<style>
+
+			/* prefered solution */
+			.center_of_viewport {
+				position: fixed;
+				top: 0;
+				left: 0;
+				transform:  translate(50vw, 50vh) translate(-50%, -50%);
+			}
+
+			/* 
+			This solution comes from here 
+			https://css-tricks.com/quick-css-trick-how-to-center-an-object-exactly-in-the-center/ .
+			With this class, text will be auto wrapped if the length is 50% of the viewport.
+			I don't think this is a desired behavior.
+			*/
+			div.center_of_viewport_2 {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: auto;
+				max-width: 100vw;
+			}
+
+			div.center_of_viewport_wrapper {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				background: red;
+				margin: 0 0;
+				padding: 0 0;
+				max-height:100vh;
+				max-width: 100vw;
+				width: 100vw;
+				height: auto;
+				overflow: hide;
+			}
+			div.center_of_viewport_wrapper>* {
+				position: absolute;
+				transform: translate(-50%, -50%);
+				width:auto;
+				white-space:normal;
+				overflow: auto;
+			}
+
+
+		</style>
+	</head>
+	<body>
+		<div class="center_of_viewport">
+			<div>
+				Hello world. My name is roxma!
+				Hello world. My name is roxma!
+				Hello world. My name is roxma!
+				Hello world. My name is roxma!
+				Hello world. My name is roxma!
+				Hello world. My name is roxma!
+				Hello world. My name is roxma!
+				Hello world. My name is roxma!
+				Hello world. My name is roxma!
+			</div>
+		</div>
+	</body>
+</html>
