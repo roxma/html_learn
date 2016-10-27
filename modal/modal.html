@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="modal.css">
+
+	<script src="/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="modal.js"></script>
+
+</head>
+<body>
+
+	<h1>Modal test</h1>
+
+	<p>
+		Hello world
+	</p>
+
+	<button onclick="$('#modal1').modal('show')" type="button">show modal</button>
+
+	<div id='modal1' class="modal_frame">
+		<p>
+			This is modal1
+		</p>
+		<div>
+			<button onclick="$('#modal1').modal('hide')" type="button">hide this modal</button>
+		</div>
+		<p>
+			This simple plugin support nested modal:
+		</p>
+		<div>
+			<button onclick="$('#modal2').modal('show')" type="button"> show modal2</button>
+		</div>
+	</div>
+
+	<div id='modal2' class="modal_frame">
+		<p>
+			This is modal2
+		</p>
+		<div>
+			<button onclick="$('#modal2').modal('hide')" type="button">hide this modal</button>
+		</div>
+	</div>
+
+</body>
+
+</html>
